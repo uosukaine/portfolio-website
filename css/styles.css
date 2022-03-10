@@ -285,7 +285,7 @@ input {
 
 @media all and (max-width: 750px) {
 	.grid {
-		grid-gab:  10px;
+		grid-gap:  10px;
 	}
 
 	.grid__item:last-child {
@@ -300,13 +300,13 @@ input {
 
 @keyframes color-change {
 	0% {
-    	fill: var(--sun-color-start);
+    fill: var(--sun-color-start);
 	}
 	50% {
-	  	fill: var(--sun-color-middle);
+	  fill: var(--sun-color-middle);
 	}
 	100% {
-	    fill: var(--sun-color-end);
+	  fill: var(--sun-color-end);
 	}
 }
 
@@ -319,20 +319,20 @@ input {
 }
 
 @keyframes cloud-move {
-  	from {
-    	transform: translate(0, 50px);
-  	}
-  	to {
-    	transform: translate(200px, 50px);
-  	}
+	from {
+  	transform: translate(0, 50px);
+	}
+	to {
+  	transform: translate(200px, 50px);
+	}
 }
 
 .cloud-front {
-  	animation-name: cloud-move;
-  	animation-duration: 30s;
-  	animation-iteration-count: infinite;
-  	animation-direction: alternate;
-  	animation-timing-function: linear;
+	animation-name: cloud-move;
+	animation-duration: 30s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	animation-timing-function: linear;
 }
 
 @keyframes cloud-move-reverse {
