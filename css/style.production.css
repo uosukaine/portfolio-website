@@ -363,7 +363,7 @@ input {
 
 @media all and (max-width: 750px) {
 	.grid {
-		grid-gab:  10px;
+		grid-gap:  10px;
 	}
 
 	.grid__item:last-child {
