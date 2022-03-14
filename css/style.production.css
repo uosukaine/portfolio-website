@@ -308,6 +308,7 @@ input {
 	-webkit-box-pack: center;
 	    -ms-flex-pack: center;
 	        justify-content: center;
+	align-items: center;
 }
 
 #about-table {
@@ -316,6 +317,7 @@ input {
 	border-spacing: 0;
 	-ms-flex-line-pack: center;
 	    align-content: center;
+	align-items: center;
 }
 
 #about-picture {

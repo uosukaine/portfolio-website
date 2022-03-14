@@ -248,6 +248,7 @@ input {
 	text-align: center;
 	margin:  0 20% 0 20%;
 	justify-content: center;
+	align-items: center;
 }
 
 #about-table {
