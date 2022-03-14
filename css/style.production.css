@@ -5,41 +5,59 @@
 * Browsers: last 4 version
 */
 
+:root {
+	--background-color: #DBE9EE;
+	--body-text-color: #4F6D7A;
+	--button-primary-color: #4A6FA5;
+	--button-secondary-color: #626D58;
+	--button-text-color: white;
+	--grid-item-color: #FFE5AF;
+	--grid-item-color-focus: white;
+	--link-color: #3f69a1;
+	--link-color-visited: #166088;
+	--link-color-hover: orangered;
+	--link-color-active: #489c79;
+	--sun-color-start: #edc655;
+	--sun-color-middle: #fcffad;
+	--sun-color-end: #f76414;
+	--header-font-weight: 700;
+}
+
 * {
 	-webkit-box-sizing: border-box;
 	        box-sizing: border-box;
 }
 
 body {
-	background-color: #DBE9EE;
+	background-color: var(--background-color);
 	font-family: 'Roboto', sans-serif;
 	font-weight: 400;
 	font-size: 16px;
-	line-height:  1.6;
+	line-height: 1.6;
 	margin: 10px;
-	color: #4F6D7A;
+	color: var(--body-text-color);
 }
 
 h1 {
 	font-family: 'Lora', sans-serif;
-	font-weight: 700;
+	font-weight: var(--header-font-weight);
 	font-size: 30px;
 }
 
 h2 {
 	font-family: 'Lora', sans-serif;
-	font-weight: 700;
+	font-weight: var(--header-font-weight);
 	font-size: 24px;
 }
 
 h3 {
 	font-family: 'Lora', sans-serif;
-	font-weight: 700;
+	font-weight: var(--header-font-weight);
 	font-size: 18px;
 }
 
 a{
-	color: #3f69a1;
+	color: var(--link-color);
 	-webkit-transition-duration: 0.2s;
 	     -o-transition-duration: 0.2s;
 	        transition-duration: 0.2s;
@@ -50,13 +68,13 @@ a{
 
 a:visited {
 	/* visited link*/
-	color: #166088;
+	color: var(--link-color-visited);
 }
 
 a:hover {
 	/* No underlining when hovering over a link*/
 	text-decoration: none;
-	color: orangered;
+	color: var(--link-color-hover);
 }
 
 a:focus {
@@ -66,17 +84,17 @@ a:focus {
 
 a:active {
 	/* selected link */
-	color: #489c79;
+	color: var(--link-color-active);
 }
 
-button {
+button,.button {
 	/* overwrites browser defaults and resets the boarder*/
 	border:  none;
 	/* takes the font from the outer container */
 	font-family: inherit;
 	/* styles the background color, font color, and text decoration (underline, etc.) of the button */
-	background-color: #4A6FA5;
-	color: white;
+	background-color: var(--button-primary-color);
+	color: var(--button-text-color);
 	text-decoration: none;
 	/* adds spacing to the button*/
 	padding:  10px;
@@ -93,43 +111,16 @@ button {
 	width: -moz-fit-content;
 	width: fit-content;
 	height: auto;
-
-}
-
-.button {
-	/* overwrites browser defaults and resets the boarder*/
-	border:  none;
-	/* takes the font from the outer container */
-	font-family: inherit;
-	/* styles the background color, font color, and text decoration (underline, etc.) of the button */
-	background-color: #4A6FA5;
-	color: white;
-	text-decoration: none;
-	/* adds spacing to the button*/
-	padding:  10px;
-	border-radius: 3px;
-	/* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
-	border-bottom: 2px solid rgba(0, 0, 0, 0.3);
-	-webkit-transition-duration: 0.2s;
-	     -o-transition-duration: 0.2s;
-	        transition-duration: 0.2s;
-	-webkit-transition-property: opacity;
-	-o-transition-property: opacity;
-	transition-property: opacity;
-	width: -webkit-fit-content;
-	width: -moz-fit-content;
-	width: fit-content;
-	height: auto;
-
 }
 
 button:hover,
 button:focus,
 .button:hover,
 .button:focus {
-	/*lets the mouse appear as a hand when hovering over the button */
-	cursor:  pointer;
-	/* reduces the opacity of the button to 80% */
+/*lets the mouse appear as a hand when hovering over the button */
+	cursor: pointer;
+
+  /* reduces the opacity of the button to 80% */
 	opacity:  0.8;
 	width: -webkit-fit-content;
 	width: -moz-fit-content;
@@ -139,7 +130,7 @@ button:focus,
 
 /*To make the link-button text always white*/
 .button:active {
-	color: white;
+	color: var(--button-text-color);
 	width: -webkit-fit-content;
 	width: -moz-fit-content;
 	width: fit-content;
@@ -148,7 +139,7 @@ button:focus,
 
 /*To make the link-button text always white*/
 .button:visited {
-	color: white;
+	color: var(--button-text-color);
 	width: -webkit-fit-content;
 	width: -moz-fit-content;
 	width: fit-content;
@@ -156,8 +147,8 @@ button:focus,
 }
 
 .button__secondary {
-	background-color: #626D58;
-	color: white;
+	background-color: var(--button-secondary-color);
+	color: var(--button-text-color);
 	width: -webkit-fit-content;
 	width: -moz-fit-content;
 	width: fit-content;
@@ -266,16 +257,7 @@ input {
  	width: 33%;
 }
 
-.grid__item:hover {
-	/*lets the mouse appear as a hand when hovering over the button */
-	cursor:  pointer;
-	/* reduces the opacity of the button to 80% */
-	-webkit-transform: scale(1.05, 1.05);
-	    -ms-transform: scale(1.05, 1.05);
-	        transform: scale(1.05, 1.05);
-	background-color:  white;
-}
-
+.grid__item:hover,
 .grid__item:focus {
 	/*lets the mouse appear as a hand when hovering over the button */
 	cursor:  pointer;
@@ -283,7 +265,7 @@ input {
 	-webkit-transform: scale(1.05, 1.05);
 	    -ms-transform: scale(1.05, 1.05);
 	        transform: scale(1.05, 1.05);
-	background-color:  white;
+	background-color:  var(--grid-item-color-focus);
 }
 
 @supports (display: grid) {
@@ -297,7 +279,7 @@ input {
 	}
 
 	.grid__item {
-	    background-color: #FFE5AF;
+	    background-color: var(--grid-item-color);
 	    width: auto;
 	    min-height: auto;
 	    margin: 0;
@@ -323,14 +305,17 @@ input {
 	        flex-direction: column;
 	text-align: center;
 	margin:  0 20% 0 20%;
-	justify-content: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
 }
 
 #about-table {
 	margin: 0 15% 0 15%;
 	border-collapse: separate;
 	border-spacing: 0;
-	align-content: center;
+	-ms-flex-line-pack: center;
+	    align-content: center;
 }
 
 #about-picture {
@@ -382,25 +367,25 @@ input {
 
 @-webkit-keyframes color-change {
 	0% {
-    	fill: #edc655;
+    fill: var(--sun-color-start);
 	}
 	50% {
-	  	fill: #fcffad;
+	  fill: var(--sun-color-middle);
 	}
 	100% {
-	    fill: #f76414;
+	  fill: var(--sun-color-end);
 	}
 }
 
 @keyframes color-change {
 	0% {
-    	fill: #edc655;
+    fill: var(--sun-color-start);
 	}
 	50% {
-	  	fill: #fcffad;
+	  fill: var(--sun-color-middle);
 	}
 	100% {
-	    fill: #f76414;
+	  fill: var(--sun-color-end);
 	}
 }
 
@@ -418,38 +403,38 @@ input {
 }
 
 @-webkit-keyframes cloud-move {
-  	from {
-    	-webkit-transform: translate(0, 50px);
-    	        transform: translate(0, 50px);
-  	}
-  	to {
-    	-webkit-transform: translate(200px, 50px);
-    	        transform: translate(200px, 50px);
-  	}
+	from {
+  	-webkit-transform: translate(0, 50px);
+  	        transform: translate(0, 50px);
+	}
+	to {
+  	-webkit-transform: translate(200px, 50px);
+  	        transform: translate(200px, 50px);
+	}
 }
 
 @keyframes cloud-move {
-  	from {
-    	-webkit-transform: translate(0, 50px);
-    	        transform: translate(0, 50px);
-  	}
-  	to {
-    	-webkit-transform: translate(200px, 50px);
-    	        transform: translate(200px, 50px);
-  	}
+	from {
+  	-webkit-transform: translate(0, 50px);
+  	        transform: translate(0, 50px);
+	}
+	to {
+  	-webkit-transform: translate(200px, 50px);
+  	        transform: translate(200px, 50px);
+	}
 }
 
 .cloud-front {
-  	-webkit-animation-name: cloud-move;
-  	        animation-name: cloud-move;
-  	-webkit-animation-duration: 30s;
-  	        animation-duration: 30s;
-  	-webkit-animation-iteration-count: infinite;
-  	        animation-iteration-count: infinite;
-  	-webkit-animation-direction: alternate;
-  	        animation-direction: alternate;
-  	-webkit-animation-timing-function: linear;
-  	        animation-timing-function: linear;
+	-webkit-animation-name: cloud-move;
+	        animation-name: cloud-move;
+	-webkit-animation-duration: 30s;
+	        animation-duration: 30s;
+	-webkit-animation-iteration-count: infinite;
+	        animation-iteration-count: infinite;
+	-webkit-animation-direction: alternate;
+	        animation-direction: alternate;
+	-webkit-animation-timing-function: linear;
+	        animation-timing-function: linear;
 }
 
 @-webkit-keyframes cloud-move-reverse {
