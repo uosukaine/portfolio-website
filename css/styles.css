@@ -25,7 +25,7 @@ body {
 	font-family: 'Roboto', sans-serif;
 	font-weight: 400;
 	font-size: 16px;
-	line-height:  1.6;
+	line-height: 1.6;
 	margin: 10px;
 	color: var(--body-text-color);
 }
@@ -93,16 +93,16 @@ button,.button {
 	transition-property: opacity;
 	width: fit-content;
 	height: auto;
-
 }
 
 button:hover,
 button:focus,
 .button:hover,
 .button:focus {
-	/*lets the mouse appear as a hand when hovering over the button */
-	cursor:  pointer;
-	/* reduces the opacity of the button to 80% */
+/*lets the mouse appear as a hand when hovering over the button */
+	cursor: pointer;
+
+  /* reduces the opacity of the button to 80% */
 	opacity:  0.8;
 	width: fit-content;
 	height: auto;
@@ -362,3 +362,7 @@ input {
  	width: 300px;
  	height: auto;
  }
+
+#contact-grid__form {
+	margin: 70px	0	0	0;
+}

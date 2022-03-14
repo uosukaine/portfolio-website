@@ -493,3 +493,7 @@ input {
  	width: 300px;
  	height: auto;
  }
+
+#contact-grid__form {
+	margin: 70px	0	0	0;
+}
