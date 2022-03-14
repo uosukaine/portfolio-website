@@ -327,6 +327,8 @@ input {
 
 #about-table {
 	margin: 0 15% 0 15%;
+	border-collapse: separate;
+	border-spacing: 0;
 }
 
 #about-picture {
