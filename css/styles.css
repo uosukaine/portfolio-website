@@ -247,6 +247,7 @@ input {
 	flex-direction: column;
 	text-align: center;
 	margin:  0 20% 0 20%;
+	justify-content: center;
 }
 
 #about-table {
