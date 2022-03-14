@@ -269,17 +269,14 @@ input {
 }
 
 #about-table {
-	margin: 0 15% 0 15%;
-	border-collapse: separate;
-	border-spacing: 0;
+	margin: 20px 15% 20px 15%;
 	align-content: center;
 }
 
 #about-picture {
  	clear: both;
  	display: block;
- 	margin-left: auto;
-  	margin-right: auto;
+  margin: 20px auto 0 auto;
  	text-align: center;
  	width: 700px;
 	height:  auto;
