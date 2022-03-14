@@ -253,6 +253,7 @@ input {
 	margin: 0 15% 0 15%;
 	border-collapse: separate;
 	border-spacing: 0;
+	align-content: center;
 }
 
 #about-picture {
