@@ -1,10 +1,10 @@
 :root {
-	--background-color: #DBE9EE;
-	--body-text-color: #4F6D7A;
-	--button-primary-color: #4A6FA5;
-	--button-secondary-color: #626D58;
+	--background-color: #dbe9ee;
+	--body-text-color: #4f6d7a;
+	--button-primary-color: #4a6fa5;
+	--button-secondary-color: #626d58;
 	--button-text-color: white;
-	--grid-item-color: #FFE5AF;
+	--grid-item-color: #ffe5af;
 	--grid-item-color-focus: white;
 	--link-color: #3f69a1;
 	--link-color-visited: #166088;
@@ -48,25 +48,25 @@ h3 {
 	font-size: 18px;
 }
 
-a{
+a {
 	color: var(--link-color);
 	transition-duration: 0.2s;
 	transition-property: color;
 }
 
 a:visited {
-	/* visited link*/
+	/* visited link */
 	color: var(--link-color-visited);
 }
 
 a:hover {
-	/* No underlining when hovering over a link*/
+	/* No underlining when hovering over a link */
 	text-decoration: none;
 	color: var(--link-color-hover);
 }
 
 a:focus {
-	/* No underlining when link targeted by keyboard*/
+	/* No underlining when link targeted by keyboard */
 	text-decoration: none;
 }
 
@@ -75,18 +75,23 @@ a:active {
 	color: var(--link-color-active);
 }
 
-button,.button {
-	/* overwrites browser defaults and resets the boarder*/
-	border:  none;
+button,
+.button {
+	/* overwrites browser defaults and resets the boarder */
+	border: none;
+
 	/* takes the font from the outer container */
 	font-family: inherit;
+
 	/* styles the background color, font color, and text decoration (underline, etc.) of the button */
 	background-color: var(--button-primary-color);
 	color: var(--button-text-color);
 	text-decoration: none;
-	/* adds spacing to the button*/
-	padding:  10px;
+
+	/* adds spacing to the button */
+	padding: 10px;
 	border-radius: 3px;
+
 	/* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
 	border-bottom: 2px solid rgba(0, 0, 0, 0.3);
 	transition-duration: 0.2s;
@@ -99,23 +104,23 @@ button:hover,
 button:focus,
 .button:hover,
 .button:focus {
-/*lets the mouse appear as a hand when hovering over the button */
+  /* lets the mouse appear as a hand when hovering over the button */
 	cursor: pointer;
 
   /* reduces the opacity of the button to 80% */
-	opacity:  0.8;
+	opacity: 0.8;
 	width: fit-content;
 	height: auto;
 }
 
-/*To make the link-button text always white*/
+/* To make the link-button text always white */
 .button:active {
 	color: var(--button-text-color);
 	width: fit-content;
 	height: auto;
 }
 
-/*To make the link-button text always white*/
+/* To make the link-button text always white */
 .button:visited {
 	color: var(--button-text-color);
 	width: fit-content;
@@ -151,8 +156,8 @@ input {
 .profile__portrait {
 	float: left;
 	width: 250px;
-	height:  auto;
-	margin-right:  40px;
+	height: auto;
+	margin-right: 40px;
 	border-radius: 50%;
 }
 
@@ -166,8 +171,8 @@ input {
 }
 
 .profile {
-	max-width:  700px;
-	margin:  0 auto;
+	max-width: 700px;
+	margin: 0 auto;
 	text-align: center;
 }
 
@@ -193,8 +198,8 @@ input {
 }
 
 .navigation-list li {
-	display:  inline-block;
-	margin-left:  15px;
+	display: inline-block;
+	margin-left: 15px;
 }
 
 .work {
@@ -209,7 +214,6 @@ input {
 	grid-gap: 20px;
 	justify-content: center;
 	margin: auto;
-
 }
 
 /* grid fallback */
@@ -224,11 +228,12 @@ input {
 
 .grid__item:hover,
 .grid__item:focus {
-	/*lets the mouse appear as a hand when hovering over the button */
-	cursor:  pointer;
+	/* lets the mouse appear as a hand when hovering over the button */
+	cursor: pointer;
+
 	/* reduces the opacity of the button to 80% */
   transform: scale(1.05, 1.05);
-	background-color:  var(--grid-item-color-focus);
+	background-color: var(--grid-item-color-focus);
 }
 
 @supports (display: grid) {
@@ -242,7 +247,6 @@ input {
 		padding-right: 10px;
 		padding-bottom: 10px;
 		justify-content: center;
-		
 	}
 
 	.grid__item {
@@ -263,23 +267,23 @@ input {
 	display: flex;
 	flex-direction: column;
 	text-align: center;
-	margin:  0 20% 0 20%;
+	margin: 0 20%;
 	justify-content: center;
 	align-items: center;
 }
 
 #about-table {
-	margin: 20px 15% 20px 15%;
+	margin: 20px 15%;
 	align-content: center;
 }
 
 #about-picture {
  	clear: both;
  	display: block;
-  margin: 20px auto 0 auto;
+  margin: 20px auto 0;
  	text-align: center;
  	width: 700px;
-	height:  auto;
+	height: auto;
  }
 
 .button {
@@ -288,7 +292,6 @@ input {
  	margin-left: auto;
   	margin-right: auto;
 }
-
 
 @media all and (max-width: 500px) {
 	.grid {
@@ -304,11 +307,11 @@ input {
 
 @media all and (max-width: 750px) {
 	.grid {
-		grid-gap:  10px;
+		grid-gap: 10px;
 	}
 
 	.grid__item:last-child {
-		grid-column:  auto / auto;
+		grid-column: auto / auto;
 		grid-row: auto / auto;
 	}
 
@@ -321,9 +324,11 @@ input {
 	0% {
     fill: var(--sun-color-start);
 	}
+
 	50% {
 	  fill: var(--sun-color-middle);
 	}
+
 	100% {
 	  fill: var(--sun-color-end);
 	}
@@ -341,6 +346,7 @@ input {
 	from {
   	transform: translate(0, 50px);
 	}
+
 	to {
   	transform: translate(200px, 50px);
 	}
@@ -358,7 +364,8 @@ input {
   from {
     transform: translate(446px, 48px);
   }
-  to {
+
+	to {
     transform: translate(100px, 65px);
   }
 }
@@ -380,8 +387,8 @@ input {
  	padding: 20px;
  	width: 300px;
  	height: auto;
- }
+}
 
 #contact-grid__form {
-	margin: 70px	0	0	0;
+	margin: 70px	0	0;
 }
